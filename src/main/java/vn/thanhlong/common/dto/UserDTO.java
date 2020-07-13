@@ -12,14 +12,11 @@ import lombok.experimental.Accessors;
 public class UserDTO {
 
     private String username;
-    private String hashValue;
-    private String salt;
     private String fullName;
+    private String password;
     private Boolean gender;
     private String email;
     private String phone;
     private Long dateCreate;
-    private String forgetPassword;
-    private String activeMail;
 
 }

@@ -10,8 +10,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import vn.thanhlong.common.dto.UserDTO;
+import vn.thanhlong.common.helper.PassHelper;
+import vn.thanhlong.db.tables.records.UserRecord;
 
 import java.sql.Connection;
+import java.util.Date;
 import java.util.List;
 
 import static vn.thanhlong.db.tables.User.USER;
@@ -37,26 +40,26 @@ public class UserReposioryImpl implements UserRepository {
         DSLContext context = DSL.using(connection);
         TransactionStatus ts = transactionManager.getTransaction(new DefaultTransactionDefinition());
         try {
+            String[] hashSalt = new PassHelper().hash(user.getPassword());
             context.insertInto(USER)
                     .set(USER.USERNAME, user.getUsername())
-                    .set(USER.HASH_VALUE, user.getHashValue())
-                    .set(USER.SALT, user.getSalt())
+                    .set(USER.HASH_VALUE, hashSalt[1])
+                    .set(USER.SALT, hashSalt[0])
                     .set(USER.FULL_NAME, user.getFullName())
                     .set(USER.GENDER, user.getGender())
                     .set(USER.EMAIL, user.getEmail())
                     .set(USER.PHONE, user.getPhone())
-                    .set(USER.DATE_CREATE, user.getDateCreate())
-                    .set(USER.ACTIVE_MAIL, user.getActiveMail())
+                    .set(USER.DATE_CREATE, new Date().getTime())
                     .execute();
             log.info("Insert user success");
             transactionManager.commit(ts);
             return true;
         } catch (DataAccessException e) {
             log.info("Insert user failed. Exception: " + e.toString());
+            throw e;
         } finally {
             context.close();
         }
-        return false;
     }
 
     @Override
@@ -65,12 +68,27 @@ public class UserReposioryImpl implements UserRepository {
     }
 
     @Override
-    public UserDTO delete(String username) {
-        return null;
+    public Boolean delete(String username) {
+        DSLContext context = DSL.using(connection);
+        TransactionStatus ts = transactionManager.getTransaction(new DefaultTransactionDefinition());
+        try {
+            UserRecord userRecord = context.fetchOne(USER, USER.USERNAME.like(username));
+            userRecord.delete();
+            return true;
+        } catch (DataAccessException e) {
+            log.info("Detele user failed. Exception: " + e.toString());
+            throw e;
+        } catch (NullPointerException e) {
+            log.info("Detele user failed. Exception: " + e.toString());
+            throw e;
+        } finally {
+            context.close();
+        }
     }
 
     @Override
     public UserDTO find(String username) {
-        return null;
+        DSLContext context = DSL.using(connection);
+        return context.select().from(USER).where(USER.USERNAME.like(username)).fetchOneInto(UserDTO.class);
     }
 }

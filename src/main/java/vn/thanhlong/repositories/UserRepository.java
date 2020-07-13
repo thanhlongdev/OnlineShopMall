@@ -12,7 +12,7 @@ public interface UserRepository {
 
     Boolean update(UserDTO user);
 
-    UserDTO delete(String username);
+    Boolean delete(String username);
 
     UserDTO find(String username);
 
