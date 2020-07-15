@@ -14,16 +14,31 @@ import vn.thanhlong.common.http_response_code.ServerStatus;
 @Accessors(chain = true)
 public class ServerResponse {
 
-    protected Boolean status;
-    protected Integer code;
-    protected JsonElement data;
-    protected String messages;
+    private Boolean status;
+    private Integer code;
+    private String messages;
+    private JsonElement data;
 
     public ServerResponse setResponse(ServerStatus code, Boolean status, JsonElement data) {
         this.code = code.getCode();
         this.messages = code.getMessage();
         this.status = status;
         this.data = data;
+        return this;
+    }
+
+    public ServerResponse setResponse(ServerStatus code, String messages, Boolean status, JsonElement data) {
+        this.code = code.getCode();
+        this.messages = messages;
+        this.status = status;
+        this.data = data;
+        return this;
+    }
+
+    public ServerResponse setResponse(ServerStatus code, Boolean status, String messages) {
+        this.code = code.getCode();
+        this.messages = messages;
+        this.status = status;
         return this;
     }
 

@@ -10,10 +10,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import vn.thanhlong.common.dto.UserDTO;
+import vn.thanhlong.common.exceptions.DataBaseException;
 import vn.thanhlong.common.helper.PassHelper;
 import vn.thanhlong.db.tables.records.UserRecord;
 
 import java.sql.Connection;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
 import java.util.List;
 
@@ -23,11 +25,14 @@ import static vn.thanhlong.db.tables.User.USER;
 @Repository
 public class UserReposioryImpl implements UserRepository {
 
-    @Autowired
     private Connection connection;
+    private DataSourceTransactionManager transactionManager;
 
     @Autowired
-    private DataSourceTransactionManager transactionManager;
+    public UserReposioryImpl(Connection connection, DataSourceTransactionManager transactionManager) {
+        this.connection = connection;
+        this.transactionManager = transactionManager;
+    }
 
     @Override
     public List<UserDTO> getAll() {
@@ -40,6 +45,11 @@ public class UserReposioryImpl implements UserRepository {
         DSLContext context = DSL.using(connection);
         TransactionStatus ts = transactionManager.getTransaction(new DefaultTransactionDefinition());
         try {
+
+            if (this.find(user.getUsername()) != null) {
+                throw new DataBaseException("Duplicate entry '" + user.getUsername() + "' for key 'PRIMARY'");
+            }
+
             String[] hashSalt = new PassHelper().hash(user.getPassword());
             context.insertInto(USER)
                     .set(USER.USERNAME, user.getUsername())
@@ -55,7 +65,31 @@ public class UserReposioryImpl implements UserRepository {
             transactionManager.commit(ts);
             return true;
         } catch (DataAccessException e) {
-            log.info("Insert user failed. Exception: " + e.toString());
+            System.out.println("ALo Alo");
+            throw new DataBaseException(e.getMessage());
+        }
+    }
+
+    @Override
+    public Boolean update(UserDTO user) {
+        DSLContext context = DSL.using(connection);
+        TransactionStatus ts = transactionManager.getTransaction(new DefaultTransactionDefinition());
+        try {
+
+            context.update(USER)
+                    .set(USER.FULL_NAME, user.getFullName())
+                    .set(USER.GENDER, user.getGender())
+                    .set(USER.EMAIL, user.getEmail())
+                    .set(USER.PHONE, user.getPhone())
+                    .set(USER.DATE_CREATE, new Date().getTime())
+                    .where(USER.USERNAME.like(user.getUsername()))
+                    .execute();
+            log.info("Update user success");
+            transactionManager.commit(ts);
+            return true;
+        } catch (Exception e) {
+            log.info("Update user failed. Exception: " + e.toString());
+            transactionManager.rollback(ts);
             throw e;
         } finally {
             context.close();
@@ -63,23 +97,15 @@ public class UserReposioryImpl implements UserRepository {
     }
 
     @Override
-    public Boolean update(UserDTO user) {
-        return null;
-    }
-
-    @Override
     public Boolean delete(String username) {
         DSLContext context = DSL.using(connection);
         TransactionStatus ts = transactionManager.getTransaction(new DefaultTransactionDefinition());
         try {
-            UserRecord userRecord = context.fetchOne(USER, USER.USERNAME.like(username));
-            userRecord.delete();
+            context.fetchOne(USER, USER.USERNAME.like(username)).delete();
             return true;
         } catch (DataAccessException e) {
-            log.info("Detele user failed. Exception: " + e.toString());
             throw e;
         } catch (NullPointerException e) {
-            log.info("Detele user failed. Exception: " + e.toString());
             throw e;
         } finally {
             context.close();

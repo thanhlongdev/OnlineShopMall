@@ -1,6 +1,121 @@
-[INFO ] [2020-07-13 07:56:16] [main] thanhlong.App - Starting App on THANHLONG with PID 6308 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
-[DEBUG] [2020-07-13 07:56:16] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
-[INFO ] [2020-07-13 07:56:16] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
-[INFO ] [2020-07-13 07:56:19] [main] configs.DatabseConnectConfiguration - Create connection 
-[INFO ] [2020-07-13 07:56:19] [main] configs.DatabseConnectConfiguration - Created connection success 
-[INFO ] [2020-07-13 07:56:21] [main] thanhlong.App - Started App in 5.175 seconds (JVM running for 8.59) 
+[INFO ] [2020-07-15 10:45:31] [main] thanhlong.App - Starting App on THANHLONG with PID 14676 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 10:45:31] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 10:45:31] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 10:45:33] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 10:45:33] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 10:45:34] [main] thanhlong.App - Started App in 4.247 seconds (JVM running for 6.248) 
+[INFO ] [2020-07-15 10:45:51] [http-nio-8080-exec-1] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: Duplicate username 
+[INFO ] [2020-07-15 10:47:24] [main] thanhlong.App - Starting App on THANHLONG with PID 9088 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 10:47:24] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 10:47:24] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 10:47:25] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 10:47:25] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 10:47:26] [main] thanhlong.App - Started App in 2.173 seconds (JVM running for 3.11) 
+[INFO ] [2020-07-15 10:47:34] [http-nio-8080-exec-3] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: Duplicate username 
+[INFO ] [2020-07-15 10:48:28] [main] thanhlong.App - Starting App on THANHLONG with PID 17216 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 10:48:28] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 10:48:28] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 10:48:29] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 10:48:29] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 10:48:30] [main] thanhlong.App - Started App in 2.175 seconds (JVM running for 3.088) 
+[INFO ] [2020-07-15 10:48:44] [http-nio-8080-exec-2] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: Duplicate username 
+[INFO ] [2020-07-15 10:50:09] [main] thanhlong.App - Starting App on THANHLONG with PID 11448 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 10:50:09] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 10:50:09] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 10:50:11] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 10:50:11] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 10:50:11] [main] thanhlong.App - Started App in 2.293 seconds (JVM running for 3.267) 
+[INFO ] [2020-07-15 11:06:29] [main] thanhlong.App - Starting App on THANHLONG with PID 12368 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:06:29] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:06:29] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:06:30] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:06:30] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:06:31] [main] thanhlong.App - Started App in 2.465 seconds (JVM running for 3.525) 
+[INFO ] [2020-07-15 11:06:36] [http-nio-8080-exec-2] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: SQL [insert into `onlineshopmall`.`user` (`username`, `hash_value`, `salt`, `full_name`, `gender`, `email`, `phone`, `date_create`) values (?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry 'admin1' for key 'PRIMARY' 
+[INFO ] [2020-07-15 11:10:08] [main] thanhlong.App - Starting App on THANHLONG with PID 9436 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:10:08] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:10:08] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:10:09] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:10:09] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:10:10] [main] thanhlong.App - Started App in 2.435 seconds (JVM running for 3.437) 
+[INFO ] [2020-07-15 11:10:24] [http-nio-8080-exec-2] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: SQL [insert into `onlineshopmall`.`user` (`username`, `hash_value`, `salt`, `full_name`, `gender`, `email`, `phone`, `date_create`) values (?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry 'admin1' for key 'PRIMARY' 
+[INFO ] [2020-07-15 11:13:32] [main] thanhlong.App - Starting App on THANHLONG with PID 17200 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:13:32] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:13:32] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:13:34] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:13:34] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:13:34] [main] thanhlong.App - Started App in 2.217 seconds (JVM running for 3.182) 
+[INFO ] [2020-07-15 11:14:01] [main] thanhlong.App - Starting App on THANHLONG with PID 1384 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:14:01] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:14:01] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:14:02] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:14:02] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:14:03] [main] thanhlong.App - Started App in 2.144 seconds (JVM running for 3.066) 
+[INFO ] [2020-07-15 11:14:06] [http-nio-8080-exec-3] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: SQL [insert into `onlineshopmall`.`user` (`username`, `hash_value`, `salt`, `full_name`, `gender`, `email`, `phone`, `date_create`) values (?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry 'admin1' for key 'PRIMARY' 
+[INFO ] [2020-07-15 11:14:42] [main] thanhlong.App - Starting App on THANHLONG with PID 11944 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:14:42] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:14:42] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:14:43] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:14:43] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:14:43] [main] thanhlong.App - Started App in 2.222 seconds (JVM running for 3.157) 
+[INFO ] [2020-07-15 11:14:48] [http-nio-8080-exec-2] repositories.UserReposioryImpl - Insert user failed. Exception: org.jooq.exception.DataAccessException: SQL [insert into `onlineshopmall`.`user` (`username`, `hash_value`, `salt`, `full_name`, `gender`, `email`, `phone`, `date_create`) values (?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry 'admin1' for key 'PRIMARY' 
+[INFO ] [2020-07-15 11:20:04] [main] thanhlong.App - Starting App on THANHLONG with PID 13484 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:20:04] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:20:04] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:20:05] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:20:05] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:20:06] [main] thanhlong.App - Started App in 2.251 seconds (JVM running for 3.15) 
+[INFO ] [2020-07-15 11:21:45] [main] thanhlong.App - Starting App on THANHLONG with PID 14472 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:21:45] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:21:45] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:21:46] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:21:46] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:21:47] [main] thanhlong.App - Started App in 2.211 seconds (JVM running for 3.113) 
+[INFO ] [2020-07-15 11:25:52] [main] thanhlong.App - Starting App on THANHLONG with PID 10384 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:25:52] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:25:52] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:25:53] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:25:53] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:25:54] [main] thanhlong.App - Started App in 2.24 seconds (JVM running for 3.163) 
+[INFO ] [2020-07-15 11:26:58] [main] thanhlong.App - Starting App on THANHLONG with PID 13064 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:26:58] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:26:58] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:26:59] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:26:59] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:26:59] [main] thanhlong.App - Started App in 2.249 seconds (JVM running for 3.16) 
+[INFO ] [2020-07-15 11:28:07] [main] thanhlong.App - Starting App on THANHLONG with PID 16936 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:28:07] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:28:07] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:28:08] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:28:08] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:28:09] [main] thanhlong.App - Started App in 2.248 seconds (JVM running for 3.144) 
+[INFO ] [2020-07-15 11:29:34] [main] thanhlong.App - Starting App on THANHLONG with PID 9376 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:29:34] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:29:34] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:29:36] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:29:36] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:29:36] [main] thanhlong.App - Started App in 2.218 seconds (JVM running for 3.134) 
+[INFO ] [2020-07-15 11:32:09] [main] thanhlong.App - Starting App on THANHLONG with PID 5780 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:32:09] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:32:09] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:32:10] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:32:10] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:32:10] [main] thanhlong.App - Started App in 2.193 seconds (JVM running for 3.107) 
+[INFO ] [2020-07-15 11:39:55] [main] thanhlong.App - Starting App on THANHLONG with PID 10236 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:39:55] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:39:55] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:39:56] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:39:56] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:39:57] [main] thanhlong.App - Started App in 2.359 seconds (JVM running for 3.297) 
+[INFO ] [2020-07-15 11:44:34] [main] thanhlong.App - Starting App on THANHLONG with PID 6680 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:44:34] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:44:34] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:44:35] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:44:35] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:44:36] [main] thanhlong.App - Started App in 2.298 seconds (JVM running for 3.221) 
+[INFO ] [2020-07-15 11:52:33] [main] thanhlong.App - Starting App on THANHLONG with PID 8428 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-15 11:52:33] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-15 11:52:33] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-15 11:52:35] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-15 11:52:35] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-15 11:52:36] [main] thanhlong.App - Started App in 2.467 seconds (JVM running for 3.797) 

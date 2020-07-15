@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import vn.thanhlong.common.dto.UserDTO;
 import vn.thanhlong.common.http_response_code.ServerStatus;
 import vn.thanhlong.common.response.ServerResponse;
-import vn.thanhlong.repositories.UserReposioryImpl;
+import vn.thanhlong.services.UserServiceImpl;
 
 @Log4j2
 @RestController
@@ -16,35 +16,27 @@ import vn.thanhlong.repositories.UserReposioryImpl;
 public class UserController {
 
     @Autowired
-    private UserReposioryImpl userReposiory;
+    private UserServiceImpl userService;
 
     @GetMapping(value = {"/"}, produces = "application/json")
     @ResponseBody
     public ServerResponse getAll() {
-        ServerResponse serverResponse = new ServerResponse();
-        try {
-            serverResponse
-                    .setResponse(ServerStatus.OK, true, new Gson().toJsonTree(userReposiory.getAll()));
-        } catch (DataAccessException e) {
-            serverResponse
-                    .setResponse(ServerStatus.INTERNAL_SERVER_ERROR, false);
-        }
-        return serverResponse;
+        return userService.getAll();
     }
 
     @PostMapping(value = {"/"})
-    public Boolean insert(@RequestBody UserDTO user) {
-        return userReposiory.insert(user);
+    public ServerResponse insert(@RequestBody UserDTO user) {
+        return userService.insert(user);
     }
 
     @GetMapping("/{username}")
-    public UserDTO findbyId(@PathVariable(value = "username") String username) {
-        return userReposiory.find(username);
+    public ServerResponse findbyId(@PathVariable(value = "username") String username) {
+        return userService.find(username);
     }
 
     @DeleteMapping("/{username}")
-    public Boolean delete(@PathVariable(name = "username") String username) {
-        return userReposiory.delete(username);
+    public ServerResponse delete(@PathVariable(name = "username") String username) {
+        return userService.delete(username);
     }
 
 }
