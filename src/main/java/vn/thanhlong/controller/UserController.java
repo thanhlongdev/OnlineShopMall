@@ -1,22 +1,26 @@
 package vn.thanhlong.controller;
 
-import com.google.gson.Gson;
+import com.sun.istack.internal.NotNull;
 import lombok.extern.log4j.Log4j2;
-import org.jooq.exception.DataAccessException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import vn.thanhlong.common.code_resoponse.ServerStatus;
 import vn.thanhlong.common.dto.UserDTO;
-import vn.thanhlong.common.http_response_code.ServerStatus;
+import vn.thanhlong.common.helper.ObjectHelper;
 import vn.thanhlong.common.response.ServerResponse;
-import vn.thanhlong.services.UserServiceImpl;
+import vn.thanhlong.services.interf.UserService;
 
 @Log4j2
 @RestController
 @RequestMapping(value = {"/users"})
 public class UserController {
 
+    private UserService userService;
+
     @Autowired
-    private UserServiceImpl userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping(value = {"/"}, produces = "application/json")
     @ResponseBody
@@ -26,7 +30,23 @@ public class UserController {
 
     @PostMapping(value = {"/"})
     public ServerResponse insert(@RequestBody UserDTO user) {
-        return userService.insert(user);
+        System.out.println(user.toString());
+        ServerResponse response = new ServerResponse();
+        try {
+            if (ObjectHelper.isNotNullOrEmptyFiedRequied(user)) {
+                response = userService.insert(user);
+            }
+        } catch (Exception e) {
+            response.setResponse(ServerStatus.INTERNAL_SERVER_ERROR, false, e.getMessage());
+        }
+
+        return response;
+    }
+
+    @PutMapping(value = {"/{username}"})
+    public ServerResponse update(
+            @RequestBody UserDTO user) {
+        return userService.update(user);
     }
 
     @GetMapping("/{username}")

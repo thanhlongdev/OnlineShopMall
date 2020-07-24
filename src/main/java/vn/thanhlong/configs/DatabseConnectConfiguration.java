@@ -1,7 +1,6 @@
 package vn.thanhlong.configs;
 
-import lombok.extern.log4j.Log4j2;
-import org.jooq.impl.DSL;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,13 +12,17 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
-@Log4j2
+@Slf4j
 @Configuration
 @PropertySource("classpath:application.properties")
 public class DatabseConnectConfiguration {
 
-    @Autowired
     private Environment env;
+
+    @Autowired
+    public DatabseConnectConfiguration(Environment env) {
+        this.env = env;
+    }
 
     @Bean
     public Connection getConnection() {
@@ -45,7 +48,7 @@ public class DatabseConnectConfiguration {
     }
 
     @Bean
-    public DataSourceTransactionManager createTransaction(){
+    public DataSourceTransactionManager createTransaction() {
         return new DataSourceTransactionManager(createDataSource());
     }
 }

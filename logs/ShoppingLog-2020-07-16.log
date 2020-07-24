@@ -1,0 +1,22 @@
+[INFO ] [2020-07-16 17:57:28] [main] thanhlong.App - Starting App on THANHLONG with PID 5692 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-16 17:57:28] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-16 17:57:28] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-16 17:57:37] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-16 17:57:37] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-16 17:57:44] [main] thanhlong.App - Starting App on THANHLONG with PID 3988 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-16 17:57:44] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-16 17:57:44] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-16 17:57:46] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-16 17:57:46] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-16 17:57:48] [main] thanhlong.App - Started App in 4.358 seconds (JVM running for 5.409) 
+[INFO ] [2020-07-16 18:01:19] [http-nio-8080-exec-3] impl.UserServiceImpl - Insert user success 
+[INFO ] [2020-07-16 18:01:38] [http-nio-8080-exec-2] impl.UserServiceImpl - Insert user success 
+[INFO ] [2020-07-16 18:02:50] [main] thanhlong.App - Starting App on THANHLONG with PID 15844 (D:\Tai Lieu\BackendProjects\OnlineShopMall\target\classes started by THANHLONG in D:\Tai Lieu\BackendProjects\OnlineShopMall) 
+[DEBUG] [2020-07-16 18:02:50] [main] thanhlong.App - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE 
+[INFO ] [2020-07-16 18:02:50] [main] thanhlong.App - No active profile set, falling back to default profiles: default 
+[INFO ] [2020-07-16 18:02:51] [main] configs.DatabseConnectConfiguration - Create connection 
+[INFO ] [2020-07-16 18:02:51] [main] configs.DatabseConnectConfiguration - Created connection success 
+[INFO ] [2020-07-16 18:02:52] [main] thanhlong.App - Started App in 2.245 seconds (JVM running for 3.267) 
+[ERROR] [2020-07-16 18:02:58] [http-nio-8080-exec-2] impl.UserServiceImpl - Insert user failed: Exception: Duplicate entry 'admin1' for key 'PRIMARY' 
+[ERROR] [2020-07-16 18:03:04] [http-nio-8080-exec-3] impl.UserServiceImpl - Insert user failed: Exception: Duplicate entry 'admin2@gmail.com' for 'EMAIL' 
+[ERROR] [2020-07-16 18:03:20] [http-nio-8080-exec-4] impl.UserServiceImpl - Insert user failed: Exception: Duplicate entry '0123456789' for 'PHONE' 

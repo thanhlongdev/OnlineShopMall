@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import vn.thanhlong.common.http_response_code.ServerStatus;
+import vn.thanhlong.common.code_resoponse.ServerStatus;
 
 
 @Data

@@ -1,8 +1,10 @@
-package vn.thanhlong.services;
+package vn.thanhlong.services.interf;
 
+import org.springframework.stereotype.Component;
 import vn.thanhlong.common.dto.UserDTO;
 import vn.thanhlong.common.response.ServerResponse;
 
+@Component
 public interface UserService {
 
     ServerResponse getAll();

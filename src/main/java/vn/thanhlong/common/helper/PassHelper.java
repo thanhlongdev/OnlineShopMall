@@ -7,7 +7,7 @@ public class PassHelper {
     public String[] hash(String plantText) {
         String salt = BCrypt.gensalt(10);
         String hash = BCrypt.hashpw(salt + plantText, BCrypt.gensalt(10));
-        return new String[]{salt, hash};
+        return new String[]{hash, salt};
     }
 
     public Boolean verifyPass(String hash, String salt, String pass) {

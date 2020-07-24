@@ -1,4 +1,4 @@
-package vn.thanhlong.common.http_response_code;
+package vn.thanhlong.common.code_resoponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
